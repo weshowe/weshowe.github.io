@@ -1,0 +1,23 @@
+h1 { text-align: center; }
+
+h3 { font-style: bold; }
+
+div { font-family:verdana;
+      font-size:130%;
+      text-align:left;
+      color:magenta;
+      border: 2px solid black;
+      padding: 20px;
+      background-color: black;
+}
+
+img { border: 1px solid black;
+      border-radius: 5px;
+      padding: 5px;
+      width: 75%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
+      
+footer { text-align: right; 
+         font-style: italic;}
