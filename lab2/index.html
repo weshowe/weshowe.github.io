@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Crazy Ray's Redneck Shop</title>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<!-- Load all products by default -->
+<body onload="populateListProductChoices('c1','c2','c3', 'displayProduct')">
+
+<div class = "banner">
+<img src="images/redneck.jpg" alt="redneck" style="float:right;">
+<h1 class = "bantitle">Crazy Ray's Redneck Shop</h1>
+<h2 class = "bantitle">Your one stop shop for redneck groceries!</h2>
+<!-- Song: A Little on the Redneck Side - Jonathan East-->
+<audio controls autoplay>
+  <source src="redneck.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Diet Information</h3>
+  <p>Tell us about y'all diet restrictions and we only gonna show y'all things y'all can eat!</p>
+	Choose them restrictions:<br><br>
+	<input type="checkbox" id="c1" name="c1" onclick="populateListProductChoices('c1','c2','c3', 'displayProduct')">
+  	<label for="c1">I be allergic to nuts!</label><br>  
+  	<input type="checkbox" id="c2" name="c2" onclick="populateListProductChoices('c1','c2','c3', 'displayProduct')">
+  	<label for="c2">I be lactose intolerant!</label><br>
+  	<input type="checkbox" id="c3" name="c3" onclick="populateListProductChoices('c1','c2','c3', 'displayProduct')">
+  	<label for="c3">I's a hoity-toity city slicker who only likes organic stuff!</label><br>
+  	
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Products found!</h3>
+  <p>Here be the products that fit them restrictions!</p>
+	 Choose the items y'all like:
+	 <br><br>
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add them items to the cart!
+	</button>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Shopping Cart</h3>
+  <div id="displayCart">Your cart is empty, partner!</div>
+</div>
+
+<script src="groceries.js"></script>
+<script src="main.js"></script>
+
+</body>
+
+<footer>
+<img src="images/footlogo.jpg" style="float:right;">
+<p>Website designed By Billy-Bob Bobbin</p>
+</footer>
+
+</html>
