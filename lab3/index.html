@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crazy Ray's Redneck Shop</title>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="groceries.js"></script>
+<script src="main.js"></script>
+</head>
+
+<!-- Load all products by default -->
+<body onload="populateListProductChoices(pNut,pLac,pOrg,'displayProduct')">
+
+<div class = "banner">
+<img src="images/redneck.jpg" alt="redneck" style="float:right;">
+<h1 class = "bantitle">Crazy Ray's Redneck Shop</h1>
+<h2 class = "bantitle">Your one stop shop for redneck groceries!</h2>
+<!-- Song: A Little on the Redneck Side - Jonathan East-->
+<audio controls autoplay>
+  <source src="redneck.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="dropdown">
+<em id="totCounter" style="float:right;">Total: $0.00</em>
+  <button class="dropbtn" id="dropbtn">Cart (0)</button>
+  <div class="dropdown-content" id="pList">
+  </div>
+  </div>
+
+<div style="position:relative;">
+<!-- Sidebar code taken from https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp-->
+  <div id="sidebar" class="sidenav">
+  <h5>Filter by Diet Restrictions:</h5>
+  <p id= "org" class="selector" onclick="updatePref(2)">Organic</p>
+  <p id= "nut" class="selector" onclick="updatePref(0)">Nut-Free</p>
+  <p id= "lac" class="selector" onclick="updatePref(1)">Lactose Free</p>
+</div>
+
+<!-- Code for dropdown menu taken from https://www.w3schools.com/howto/howto_css_dropdown.asp -->
+<div id="Products" class="tabcontent" style="margin-left: 150px">
+         <h1>Click the products you want to buy!</h1>
+	 <div id="displayProduct"></div>
+</div>
+
+</div>
+
+</body>
+
+<footer>
+<img src="images/footlogo.jpg" style="float:right;">
+<p>Website designed By Billy-Bob Bobbin</p>
+</footer>
+
+</html>
