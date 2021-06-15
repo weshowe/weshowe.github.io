@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Doge Veterinary Hospital</title>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<script src="main.js"></script>
+</head>
+<body>
+<!-- Many elements adapted from Ryan Matte's example page: https://github.com/RyanMatte/Website/tree/master -->
+<div class = "container-lg">
+
+<nav class="navbar bg-dark text-white p-3 my-3 ">
+<img src="images/logo.png" width="300" height="300">
+<img src="images/map.png" width="300" height="300">
+<p style="float:right;font-size:16px;border:medium solid white;border-radius: 5px;padding: 1em;">
+<b>Address:</b><br>
+200 metres due south of the Stony Swamp Trail entrance on West Hunt Club Road<br>
+Nepean, ON<br>
+K2R 1H4<br>
+613-555-5555<br>
+drdoge@drdogehospital.cool<br><br>
+<b>Opening Hours:</b><br>
+Every day from 6:00 AM - 11:59 PM<br>
+
+</p>
+</nav>
+    <div class=" p-3 my-3 border bg-light">
+        <h1 style="text-align:center;">Meet our Founder, Dr. Doge!</h1>
+        <img src="images/building.jpg" style="display:block;margin-left:auto;margin-right:auto;width:50%;"><br>
+        <p>
+        Hi, I'm a doge. Humans are sometimes stupid and mean so I decided to make my own veterinary hospital that's for pets, by pets!
+
+	Humans wouldn't let me buy a building because I'm a doge, so I made my own building. I hope you like it!<br><br>
+
+	They also don't let doges become veterinarians, so I just watched videos about veterinarian stuff on YouTube and taught myself! Silly humans don't 	 need to go to school when everything is free on the Internet!<br><br>
+	
+	<strong>- Dr. Doge</strong><br><em>Founder, CEO, and Head Surgeon at Dr. Doge Veterinary Hospital</em>
+        </p>
+    </div><br>
+    <h1 style="text-align:center;">Check out our cut-rate services!</h1>
+        <table class="table table-info table-hover">
+        <thead>
+            <tr>
+                <th scope="col"><h2>Service</h2></th>
+                <th scope="col"><h2>Description</h2></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Spaying/Neutering: $50</td>
+                <td>If you don't want your doges to make more doges, we will spay or neuter them for only $50! It costs $20 extra for anaesthetic (Jim Beam White Label).</td>
+            </tr>
+            <tr>
+                <td>Vaccinations: $100</td>
+                <td>If your new pet needs his shots, we will give them all for only $100! Note: Vaccines may be expired, but probably still work!</td>
+            </tr>
+            <tr>
+                <td>Dentistry Services: $20</td>
+                <td>Scruffy got us a new pair of pliers, so we can now do dental surgery! We'll even let you keep your pet's teeth in a jar if you want!</td>
+            </tr>
+            <tr>
+                <td>Deworming and tick removal: $10</td>
+                <td>We hate worms, so if your pet has worms, we will give medicine to get rid of them! Buttercup is also very good at removing ticks because she has very sharp teeth!</td>
+            </tr>
+            <tr>
+                <td>Checkup: $75</td>
+                <td>We check your pet for anything that's wrong, and tell you how to fix it! We borrowed lots of machines from other veterinary hospitals, so we know what we're doing!</td>
+            </tr>
+            <tr>
+                <td>General Surgery: $150</td>
+                <td>We'll do any kind of surgery you want for a flat rate of $150! We have saws, bandages, and lots of duct tape, so we can do anything!</td>
+            </tr>
+        </tbody>
+    </table>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="display:block;margin-left:auto;margin-right:auto;width:50%;">
+        Book an Appointment Today!
+    </button>
+
+    <!-- Modal, borrowed some code from the TA's page, and from: https://www.w3schools.com/bootstrap4/bootstrap_forms.asp -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Book Your Appointment!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Please select all of the services you would like:
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="ser1" id="ser1">
+                        <label class="form-check-label" for="ser1">Spaying/Neutering: $50</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="ser2" id="ser2">
+                        <label class="form-check-label" for="ser2">Vaccinations: $100</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="ser3" id="ser3">
+                        <label class="form-check-label" for="ser3">Dentistry Services: $20</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="ser4" id="ser4">
+                        <label class="form-check-label" for="ser4">Deworming and tick removal: $10</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="ser5" id="ser5">
+                        <label class="form-check-label" for="ser5">Checkup: $75</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="ser6" id="ser6">
+                        <label class="form-check-label" for="ser6">General Surgery: $150</label>
+                    </div><br>
+    <div class="form-group">
+    <label for="aDate">Enter the date of your desired appointment:</label>
+    <input type="date" class="form-control" id="aDate" name="aDate" value="2021-06-13" min="2021-01-01" max="2021-12-31"required>
+    </div><br>
+    <div class="form-group">
+    <label for="aTime">Enter the time of your desired appointment:</label>
+    <input type="time" class="form-control" id="aTime" name="aTime" min="06:00" max="23:59"required>
+    </div><br>
+    <div class="form-group">
+    <label for="uname">Name:</label>
+    <input type="text" class="form-control" id="uname" placeholder="John Smith" name="uname" required>
+    </div><br>
+    <div class="form-group">
+    <label for="pNum">Phone Number:</label>
+    <input type="tel" class="form-control" id="pNum" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="pNum" required>
+    </div><br>
+    <div class="form-group">
+    <label for="eMa">Email Address:</label>
+    <input type="email" class="form-control" id="eMa" placeholder="ilovedoges@uottawa.ca" name="eMa" required>
+    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <h1 style="text-align:center;">Meet our team of untrained professionals!</h1>
+    <div class="row justify-content-around">
+        <div class="card" style="width: 18rem;">
+        <h2 style="text-align:center;">Dr. Doge</h2>
+            <img src="images/doge.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">I run the hospital and do all the surgery and important things!</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+        <h2 style="text-align:center;">Buttercup</h2>
+            <img src="images/buttercup.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Buttercup is our nurse! She gives shots and does checkups and stuff! She helps me a lot, and she's really great!</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+        <h2 style="text-align:center;">Pedro</h2>
+            <img src="images/pedro.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Pedro is our pharmacist! He gets all of our medication from his doggy friends in Mexico!</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+        <h2 style="text-align:center;">Scruffy</h2>
+            <img src="images/scruffy.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Scruffy gets all of our tools and machines and makes sure they work! He also runs our website! </p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+</body>
+<br>
+<footer>
+<p style="text-align:right;">Website designed By Really Original Designs Ltd.</p>
+</footer>
+
+</html>
