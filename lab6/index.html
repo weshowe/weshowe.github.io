@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Doge Veterinary Hospital</title>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+	<! jQuery scripts from starter code>	
+	    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script src="script.js"></script>
+<link href="jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+<!-- Many elements adapted from Ryan Matte's example page: https://github.com/RyanMatte/Website/tree/master -->
+<div class = "container-lg">
+
+<nav class="navbar bg-dark text-white p-3 my-3 ">
+<img src="images/logo.png" width="300" height="300" class="rounded float-left">
+<img src="images/map.png" width="300" height="300" class="rounded float-left">
+<p style="float:right;font-size:16px;border:medium solid white;border-radius: 5px;padding: 1em;">
+<b>Address:</b><br>
+200 metres due south of the Stony Swamp Trail entrance on West Hunt Club Road<br>
+Nepean, ON<br>
+K2R 1H4<br>
+613-555-5555<br>
+drdoge@drdogehospital.cool<br><br>
+<b>Opening Hours:</b><br>
+Every day from 6:00 AM - 11:59 PM<br><br>
+<a class="btn btn-primary" href="#aServ" role="button" style="display:block;margin-left:auto;margin-right:auto;width:45%;float:left;">See what services we offer!</a>
+<a class="btn btn-primary" href="#aBook" role="button" style="display:block;margin-left:auto;margin-right:auto;width:45%;float:right;">Book an appointment with us!</a>
+</p>
+</nav>
+    <div class=" p-3 my-3 border bg-light">
+        <h1 style="text-align:center;"><img src="https://img.icons8.com/fluent/48/000000/doge.png"/>Meet our Founder, Dr. Doge!<img src="https://img.icons8.com/fluent/48/000000/doge.png"/></h1>
+        <img src="images/building.jpg" style="display:block;margin-left:auto;margin-right:auto;width:50%;" class="rounded img-thumbnail"><br>
+        <p>
+        Hi, I'm a doge. Humans are sometimes stupid and mean so I decided to make my own veterinary hospital that's for pets, by pets!
+
+	Humans wouldn't let me buy a building because I'm a doge, so I made my own building. I hope you like it!<br><br>
+
+	They also don't let doges become veterinarians, so I just watched videos about veterinarian stuff on YouTube and taught myself! Silly humans don't 	 need to go to school when everything is free on the Internet!<br><br>
+	
+	<strong>- Dr. Doge</strong><br><em>Founder, CEO, and Head Surgeon at Dr. Doge Veterinary Hospital</em>
+        </p>
+    </div><br>
+    <h1 style="text-align:center;" id="aServ"><img src="https://img.icons8.com/nolan/64/dog.png"/>Check out our cut-rate services!<img src="https://img.icons8.com/nolan/64/dog.png"/></h1>
+        <table class="table table-striped table-hover">
+        <thead>
+        </thead>
+        <tbody>
+            <tr class="table-info">
+                <td><p style ="text-align:center;font-weight:bold;">Spaying/Neutering: $50</p><img src="images/neutering.jpg" width="100" height="100" style="display:block;margin-left:auto;margin-right:auto;width:50%;"></td>
+                <td><p>If you don't want your doges to make more doges, we will spay or neuter them for only $50! Includes free anaesthetic (Jim Beam White Label).</p><br><a class="btn btn-primary" href="#aBook" role="button" onclick="preselectServ(1)" id="b1">Book an appointment! I don't want more doges!</a></td>
+            </tr>
+            <tr class="table-primary">
+                <td><p style ="text-align:center;font-weight:bold;">Vaccinations: $100</p><img src="images/vaccination.jpg" width="100" height="100" style="display:block;margin-left:auto;margin-right:auto;width:50%;"></td>
+                <td><p>If your new pet needs his shots, we will give them all for only $100! Note: Vaccines may be expired, but probably still work!</p><br><a class="btn btn-primary" href="#aBook" role="button" onclick="preselectServ(2)" id="b2">Book an appointment! I don't want a rabid doge!</a></td>
+            </tr>
+            <tr class="table-light">
+                <td><p style ="text-align:center;font-weight:bold;">Dentistry Services: $20</p><img src="images/dentistry.jpeg" width="100" height="100" style="display:block;margin-left:auto;margin-right:auto;width:50%;"></td>
+                <td><p>Scruffy got us a new pair of pliers, so we can now do dental surgery! We'll even let you keep your pet's teeth in a jar if you want!</p><br><a class="btn btn-primary" href="#aBook" role="button" onclick="preselectServ(3)" id="b3">Book an appointment! My pet doesn't need all his teeth anyway!</a></td>
+            </tr>
+            <tr class="table-warning">
+                <td><p style ="text-align:center;font-weight:bold;">Deworming: $10</p><img src="images/deworming.jpg" width="100" height="100" style="display:block;margin-left:auto;margin-right:auto;width:50%;"></td>
+                <td><p>We hate worms, so if your pet has worms, we will give medicine to get rid of them!</p><br><a class="btn btn-primary" href="#aBook" role="button" onclick="preselectServ(4)" id="b4">Book an appointment! My pet has worms and he doesn't want them anymore!</a></td>
+            </tr>
+            <tr class="table-success">
+                <td><p style ="text-align:center;font-weight:bold;">Checkup: $75</p><img src="images/checkup.jpg" width="100" height="100" style="display:block;margin-left:auto;margin-right:auto;width:50%;"></td>
+                <td><p>We check your pet for anything that's wrong, and tell you how to fix it! We borrowed lots of machines from other veterinary hospitals, so we know what we're doing!</p><br><a class="btn btn-primary" href="#aBook" role="button" onclick="preselectServ(5)" id="b5">Book an appointment! I want to check-up before I wreck-up!</a></td>
+            </tr>
+            <tr class="table-danger">
+                <td><p style ="text-align:center;font-weight:bold;">General Surgery: $150</p><img src="images/surgery.jpg" width="100" height="100" style="display:block;margin-left:auto;margin-right:auto;width:50%;"></td>
+                <td><p>We'll do any kind of surgery you want for a flat rate of $150! We have saws, bandages, and lots of duct tape, so we can do anything!</p><br><a class="btn btn-primary" href="#aBook" role="button" onclick="preselectServ(6)" id="b6">Book an appointment! My doge needs cheap surgery!</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <h1 style="text-align:center;"><img src="https://img.icons8.com/fluent/48/000000/dog.png"/>Meet our team of untrained professionals!<img src="https://img.icons8.com/fluent/48/000000/dog.png"/></h1>
+    <div class="row justify-content-around">
+        <div class="card" style="width: 18rem;">
+        <h2 style="text-align:center;">Dr. Doge</h2>
+            <img src="images/doge.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">I run the hospital and do all the surgery and important things!</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+        <h2 style="text-align:center;">Buttercup</h2>
+            <img src="images/buttercup.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Buttercup is our nurse! She gives shots and does checkups and stuff! She helps me a lot, and she's really great!</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+        <h2 style="text-align:center;">Pedro</h2>
+            <img src="images/pedro.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Pedro is our pharmacist! He gets all of our medication from his doggy friends in Mexico!</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+        <h2 style="text-align:center;">Scruffy</h2>
+            <img src="images/scruffy.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Scruffy gets all of our tools and machines and makes sure they work! He also runs our website! </p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+<!-- I made a Wizard pattern by hiding different div elements and using next and back buttons. -->
+<!-- Pattern attribute with regexes used for field validation. -->
+    <h1 style="text-align:center;" id="aBook"><img src="https://img.icons8.com/office/40/000000/dog.png"/>Appointment Booking<img src="https://img.icons8.com/office/40/000000/dog.png"/></h1>
+    <div class=" p-3 my-3 border bg-light" style="display:flex;">
+        <div id ="a1" style="display:block">
+        <h1 style="text-align:center;">Please Select a Service.<img src="https://img.icons8.com/ios-glyphs/30/000000/jake.png"/></h1>
+        <em id="a1err" style="color:red;"></em>
+        <form action="javascript:nextService()">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ser" id="ser1">
+                        <label class="form-check-label" for="ser1"><img src="images/neutering.jpg" height="30" width="30" class="rounded"> Spaying/Neutering: $50</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ser" id="ser2">
+                        <label class="form-check-label" for="ser2"><img src="images/vaccination.jpg" height="30" width="30" class="rounded"> Vaccinations: $100</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ser" id="ser3">
+                        <label class="form-check-label" for="ser3"><img src="images/dentistry.jpeg" height="30" width="30" class="rounded"> Dentistry Services: $20</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ser" id="ser4">
+                        <label class="form-check-label" for="ser4"><img src="images/deworming.jpg" height="30" width="30" class="rounded"> Deworming: $10</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ser" id="ser5">
+                        <label class="form-check-label" for="ser5"><img src="images/checkup.jpg" height="30" width="30" class="rounded"> Checkup: $75</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ser" id="ser6">
+                        <label class="form-check-label" for="ser6"><img src="images/surgery.jpg" height="30" width="30" class="rounded"> General Surgery: $150</label>
+                    </div><br>
+                    <button class="btn btn-primary" type="submit" style="float:left;">Next</button>
+                    </form>
+        </div>
+        <div id ="a2" style="display:none">
+        <h1>Service Selected: <b id="serSel">hi</b><img src="https://img.icons8.com/fluent/48/000000/doge.png"/></h1>
+        <em>Please select the doge you want to perform the service!</em>
+        <em id="a2err" style="color:red;"></em><br><br>    
+                <form action="javascript:nextExpert()">
+                <div id="lol" style="display:flex;flex-direction:column;">
+                    <div class="form-check" id="e1" style="display:none">
+                        <input class="form-check-input" type="radio" name="ex" id="ex1">
+                        <label class="form-check-label" for="ex1"><img src="images/doge.jpg" height="30" width="30" class="rounded"> <b>Dr. Doge</b> (Monday and Friday ONLY)</label>
+                    </div>
+                    <div class="form-check" id="e2" style="display:none">
+                        <input class="form-check-input" type="radio" name="ex" id="ex2">
+                        <label class="form-check-label" for="ex2"><img src="images/buttercup.jpg" height="30" width="30" class="rounded"> <b>Buttercup</b> (Monday-Saturday)</label>
+                    </div>
+                    <div class="form-check" id="e3" style="display:none">
+                        <input class="form-check-input" type="radio" name="ex" id="ex3">
+                        <label class="form-check-label" for="ex3"><img src="images/pedro.jpg" height="30" width="30" class="rounded"> <b>Pedro</b> (Monday-Friday)</label>
+                    </div>
+                    <div class="form-check" id="e4" style="display:none">
+                        <input class="form-check-input" type="radio" name="ex" id="ex4">
+                        <label class="form-check-label" for="ex4"><img src="images/scruffy.jpg" height="30" width="30" class="rounded"> <b>Scruffy</b> (Every Day)</label>
+                    </div>
+                </div><br>
+                    <button class="btn btn-primary" type="submit" style="float:right;">Next</button>
+                    </form>
+                    <a class="btn btn-primary" role="button" style="float:left;" onclick="prevExpert()">Go Back</a>
+        </div>
+        <div id ="a3" style="display:none">
+        <h1>Choose a date and time for your appointment! <img src="https://img.icons8.com/ios-glyphs/30/000000/running-away.png"/></h1>
+        
+    <form class="requires-validation" id="formA" action="javascript:nextApp()" novalidate>
+        <div class="col-lg-2">
+            <label for="datepicker" class="form-label"><img src="https://img.icons8.com/material-outlined/24/000000/calendar--v1.png"/>Date:</label>
+            <input type="text" class="datepicker form-control" id="datepicker" placeholder="dd/mm/yyyy" data-toggle="tooltip" data-placement="right" title="Click to select a date from the calendar!" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='black'" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}" required>
+            
+            <div class="valid-feedback">
+            It's a date! We'll bring flowers and a lot of drool!
+            </div>
+            
+            <div class="invalid-feedback">
+            Please click inside the box and choose a date.
+            </div>
+            
+        </div><br>
+        <div class="col-lg-2">
+            <label for="timey" class="form-label"><img src="https://img.icons8.com/material-outlined/24/000000/clock--v1.png"/>Time:</label>
+            <input type="time" class="form-control" id="timey" placeholder="12:00 PM" min="06:00" max="23:59" step="60" data-toggle="tooltip" data-placement="right" title="You may need to enter AM or PM if you're using Firefox! Real doges don't use Firefox! We hate foxes!" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='black'" required>
+            
+            <div class="valid-feedback">
+            That's a good time! We'd give it a treat, but time is an abstract concept and that's impossible!
+            </div>
+            
+            <div class="invalid-feedback">
+            Please enter a valid appointment time. Appointment must be during opening hours (6:00AM - 11:59PM).
+            </div>
+            
+        </div>
+        <div class="form-button mt-3">
+        <button class="btn btn-primary" type="submit" style="float:right;">Next</button>
+        </div>
+    </form>
+    <a class="btn btn-primary" role="button" style="float:left;" onclick="prevApp()">Go Back</a>
+    
+        </div>
+        <div id ="a4" style="display:none">
+        <h1>Payment Information<img src="https://img.icons8.com/ios/50/000000/dogecoin.png"/></h1>
+        <em id="chrg"></em><br>
+        <form class="requires-validation" id="formB" action="javascript:nextPay()" novalidate>
+        <div class="col-lg-6">
+            <label for="cc" class="form-label"><img src="https://img.icons8.com/ios-glyphs/30/000000/mastercard-credit-card.png"/>Credit Card Number:</label>
+            <input type="text" class="form-control" id="cc" placeholder="1337 1337 1337 1337" pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" data-toggle="tooltip" data-placement="right" title="Please enter the 16 digits of your credit card, separated by spaces. We need this so we can take your money if you're an RCMP officer! Doges unite!" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='black'" required>
+            
+            <div class="valid-feedback">
+            You have a valid credit card number! We promise not to steal it.
+            </div>
+            
+            <div class="invalid-feedback">
+            Please enter a valid 16 digit credit card number. It should be of the form: 1234 5678 9123 4567. WE WANT TO TAKE YOUR MONEY - I mean, help you!
+            </div>
+            
+        </div><br>
+        <div class="col-lg-6">
+            <label for="telly" class="form-label"><img src="https://img.icons8.com/ios-glyphs/30/000000/phone-not-being-used.png"/>Telephone Number:</label>
+            <input type="tel" class="form-control" id="telly" placeholder="613-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" data-toggle="tooltip" data-placement="right" title="Include your area code and use hyphens! We need your phone number so we can sell it to telemarketers! We doges need more money!" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='black'" required>
+            
+            <div class="valid-feedback">
+            That's a good telephone number! Yes it is!
+            </div>
+            
+            <div class="invalid-feedback">
+            Bad telephone number! It needs to be like 555-555-5555.
+            </div>
+            
+        </div>
+        <div class="form-button mt-3">
+        <button class="btn btn-primary" type="submit" style="float:right;">Next</button>
+        </div>
+    </form>
+    <a class="btn btn-primary" role="button" style="float:left;" onclick="prevPay()">Go Back</a>
+        </div>
+        <div id ="a5" style="display:none">
+        <h1>Confirmation<img src="https://img.icons8.com/ios/50/000000/crash-bandicoot.png"/></h1>
+        <b id="conf"></b>
+        </div>       
+    </div><br>
+        
+</div>
+
+
+</body>
+<br>
+<footer>
+<p style="text-align:right;">Website designed By Really Original Designs Ltd.</p>
+</footer>
+
+</html>
