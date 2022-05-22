@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Shopify Challenge</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="Shopify.js"></script>
+</head>
+
+<body>
+<div class = "banner">
+<img src="images/shopify.jpg" alt="shopify" style="float:right;">
+<h1 class = "bantitle">Shopify Front End Developer Challenge</h1>
+<h2 class = "bantitle">"Because Real Programmers Recycle Code from Class Projects!"</h2>
+<!-- Song: The Hampster Dance Remix - DJ Harmonics & DJ Striden (Royalty Free)-->
+<audio controls autoplay>
+  <source src="shopify.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<br>
+<i>I left my application to the last day (busy with work + family + side projects), and I didn't know we had to make apps. I made this in an hour.</i>
+<br><b>-Wesley</b><br>
+<br>
+
+<label for="key">Enter your API key:</label>
+<input type="password" id="key"><br><br>
+
+<form action="javascript:;" onsubmit="query()">>  
+  <label for="pl">Enter the phrase to be sent to the openAI engine.</label><br>
+  <textarea id="pl" name="pig" rows="6" cols="100"></textarea> 
+
+  <br><br>
+  
+  <input type="submit" value="Submit">
+  <input type="reset">
+</form>
+
+<br>
+<h2>Responses:</h2>
+<h5 id ="pl2"</h5>
+</body>
+
+</html>
